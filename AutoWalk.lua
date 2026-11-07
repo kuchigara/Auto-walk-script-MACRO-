@@ -60,7 +60,6 @@ local function startWalking()
             local rootPart = player.Character:FindFirstChild("HumanoidRootPart")
             
             if humanoid and rootPart then
-                
                 player:Move(Vector3.new(0, 0, -1), true)
             end
         end
@@ -77,10 +76,10 @@ end
 button.MouseButton1Click:Connect(function()
     isWalking = not isWalking
     if isWalking then
-        button.BackgroundColor3 = Color3.fromRGB(60, 255, 60) -- Зеленый цвет при ВКЛ
+        button.BackgroundColor3 = Color3.fromRGB(60, 255, 60)
         startWalking()
     else
-        button.BackgroundColor3 = Color3.fromRGB(255, 60, 60) -- Красный цвет при ВЫКЛ
+        button.BackgroundColor3 = Color3.fromRGB(255, 60, 60)
         stopWalking()
     end
 end)
